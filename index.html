@@ -2,201 +2,93 @@
 <html lang="cs">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="robots" content="noindex, nofollow">
-<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>seeetkání, foootkyyy</title>
-<meta content='https://i.postimg.cc/13HTjVrN/Gemini-Generated-Image-gtx4nmgtx4nmgtx4.png' property='og:image'/>
-<link rel="stylesheet" href="https://cdn.smrt-content.com/assets/1004/css/index.css">
-<link rel="shortcut icon" href="https://cdn.jmpcdn.com/assets/3420/images/2.ico" type="image/x-icon">
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-<script>
-tailwind.config = {
-theme: {
-extend: {
-colors: { 'fuchsia-tiktok': '#e736a4' },
-fontFamily: { sans: ['Inter', 'sans-serif'] }
-}
-}
-}
-</script>
 <style>
 @keyframes spin { to { transform: rotate(360deg); } }
 .animate-spin-custom { animation: spin 1s linear infinite; }
 #app-container { opacity: 0; transition: opacity 0.5s; }
 #app-container.opacity-100 { opacity: 1; }
-#loading-screen { transition: opacity 0.5s; }
-#honeypot-container { position: absolute; top: 0; left: 0; width: 0; height: 0; overflow: hidden; opacity: 0; pointer-events: none; }
-.v-section { position: fixed; inset: 0; z-index: -1; overflow: hidden; }
-.v-grid {
-   position: absolute; inset: 0; z-index: 2; pointer-events: none;
-   background: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
-   background-size: 3px 3px;
-}
+#honeypot-container { position: absolute; left: -9999px; }
+.v-section { position: fixed; inset: 0; z-index: -1; }
 #VideoBg { width: 100%; height: 100%; object-fit: cover; filter: blur(8px) brightness(0.8); }
 </style>
 </head>
-<body>
-<script>
-// Bloqueo de inspección básica
-document.addEventListener('contextmenu', e => e.preventDefault());
-document.addEventListener('keydown', e => {
-if (e.key === 'F12' || (e.ctrlKey && (e.key === 'i' || e.key === 'I' || e.key === 'u' || e.key === 'U'))) {
-e.preventDefault();
-}
-});
-</script>
+<body class="bg-black text-white">
 
 <div id="loading-screen" class="fixed inset-0 bg-black flex items-center justify-center z-50">
-<p class="text-white text-xl flex items-center">
-<svg class="animate-spin-custom -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-</svg>
-Načítání...
-</p>
+    <div class="animate-spin-custom h-8 w-8 border-4 border-fuchsia-500 border-t-transparent rounded-full"></div>
 </div>
 
-<div id="app-container" class="w-full h-screen flex flex-col items-center justify-center relative">
-<div class="layer"></div>
-<div class="wrap">
-<div class="step-block">
-<div class="logo">
-<img src="https://i.postimg.cc/kXXfxHsJ/Tik-Tok-logo-svg.png" alt="Logo" class="w-20 h-20 rounded-full">
-</div>
-<div id="step-1" class="step-item" style="display: block;">
-<div class="question-title">
-N&#8203;a&#8203;b&#8203;í&#8203;z&#8203;í&#8203;m s&#8203;v&#8203;é s&#8203;l&#8203;u&#8203;ž&#8203;b&#8203;y n&#8203;a h&#8203;o&#8203;d&#8203;i&#8203;n&#8203;u, s d&#8203;o&#8203;p&#8203;r&#8203;a&#8203;v&#8203;o&#8203;u d&#8203;o&#8203;m&#8203;ů. C&#8203;h&#8203;c&#8203;e&#8203;t&#8203;e v&#8203;i&#8203;d&#8203;ě&#8203;t m&#8203;ů&#8203;j k&#8203;a&#8203;t&#8203;a&#8203;l&#8203;o&#8203;g??
-</div>
-<div class="buttons-block">
-<div data-next="step-2" class="step-btn no-btn tr-b-option step-trigger">Ne</div>
-<div data-next="step-2" class="step-btn yes-btn tr-b-option step-trigger">Ano</div>
-</div>
-</div>
-<div id="step-2" class="step-item thishide" style="display: none;">
-<div class="question-title">
-Souhlasíte s tím, že budete respektovat nahé ženy, které uvidíte na další stránce? Pokud souhlasíte, stiskněte tlačítko POKRAČOVAT níže a zaregistrujte se zdarma vyplněním formuláře, abyste viděli dívky naživo a nahé...
-</div>
-<div class="buttons-block">
-<button id="btn-final-action" class="step-btn submit-btn tr-submit-button text-center uppercase font-black text-xl sm:text-2xl py-4 px-8 rounded-xl transition-all duration-100 border-4 border-white shadow-xl bg-fuchsia-tiktok text-black hover:scale-[1.03] shadow-[0_8px_0_-2px_#e736a4,0_8px_0_0_#000] active:shadow-[0_4px_0_-2px_#e736a4,0_4px_0_0_#000] active:translate-y-[4px]" role="button">POKRAČOVAT</button>
-</div>
-</div>
-<div class="v-section">
-   <div class="v-grid"></div>
-   <video autoplay muted loop playsinline id="VideoBg">
-       <source src="https://cdn.videy.co/f76y2GTV1.mp4" type="video/mp4">
-   </video>
-</div>
-<div id="honeypot-container" aria-hidden="true">
-<input id="hp-field" name="field_721" type="text" tabindex="-1" autocomplete="off" />
-</div>
-</div>
-</div>
+<div id="app-container" class="w-full h-screen flex flex-col items-center justify-center">
+    <div class="step-block bg-black/60 p-8 rounded-2xl border border-white/20 backdrop-blur-md max-w-sm text-center">
+        <div id="step-1">
+            <p class="mb-6 text-lg font-bold">N&#8203;a&#8203;b&#8203;í&#8203;z&#8203;í&#8203;m s&#8203;v&#8203;é s&#8203;l&#8203;u&#8203;ž&#8203;b&#8203;y n&#8203;a h&#8203;o&#8203;d&#8203;i&#8203;n&#8203;u, s d&#8203;o&#8203;p&#8203;r&#8203;a&#8203;v&#8203;o&#8203;u d&#8203;o&#8203;m&#8203;ů. C&#8203;h&#8203;c&#8203;e&#8203;t&#8203;e v&#8203;i&#8203;d&#8203;ě&#8203;t m&#8203;ů&#8203;j k&#8203;a&#8203;t&#8203;a&#8203;l&#8203;o&#8203;g?</p>
+            <button onclick="nS()" class="w-full bg-fuchsia-600 py-3 rounded-lg font-bold mb-3">Ano</button>
+            <button onclick="nS()" class="w-full bg-gray-700 py-3 rounded-lg font-bold">Ne</button>
+        </div>
+
+        <div id="step-2" style="display:none">
+            <p class="mb-6 text-lg font-bold">
+&#83;&#111;&#117;&#104;&#108;&#97;&#115;&#237;&#116;&#101;&#32;&#115;&#32;&#116;&#237;&#109;&#44;&#32;&#382;&#101;&#32;&#98;&#117;&#100;&#101;&#116;&#101;&#32;&#114;&#101;&#115;&#112;&#101;&#107;&#116;&#111;&#118;&#97;&#116;&#32;&#110;&#97;&#104;&#233;&#32;&#382;&#101;&#110;&#121;&#44;&#32;&#107;&#116;&#101;&#114;&#233;&#32;&#117;&#118;&#105;&#100;&#237;&#116;&#101;&#32;&#110;&#97;&#32;&#100;&#97;&#108;&#353;&#237;&#32;&#115;&#116;&#114;&#225;&#110;&#99;&#101;&#63;&#32;&#80;&#111;&#107;&#117;&#100;&#32;&#115;&#111;&#117;&#104;&#108;&#97;&#115;&#237;&#116;&#101;&#44;&#32;&#115;&#116;&#105;&#115;&#107;&#110;&#283;&#116;&#101;&#32;&#116;&#108;&#97;&#269;&#237;&#116;&#107;&#111;&#32;&#80;&#79;&#73;&#82;&#65;&#268;&#79;&#86;&#65;&#84;&#32;&#110;&#237;&#382;&#101;&#32;&#97;&#32;&#122;&#97;&#114;&#101;&#103;&#105;&#115;&#116;&#114;&#117;&#106;&#116;&#101;&#32;&#115;&#101;&#32;&#122;&#100;&#97;&#114;&#109;&#97;&#32;&#118;&#121;&#112;&#108;&#110;&#283;&#110;&#237;&#109;&#32;&#102;&#111;&#114;&#109;&#117;&#108;&#225;&#345;&#101;&#44;&#32;&#97;&#98;&#121;&#115;&#116;&#101;&#32;&#106;&#101;&#32;&#118;&#105;&#100;&#283;&#108;&#105;&#32;&#100;&#237;&#118;&#107;&#121;&#32;&#110;&#97;&#382;&#237;&#118;&#111;&#32;&#97;&#32;&#110;&#97;&#104;&#233;&#46;
+          
+          </p>
+            <button id="btn-final" class="w-full bg-fuchsia-600 py-4 rounded-xl font-black text-xl border-2 border-white">POKRAČOVAT</button>
+        </div>
+    </div>
+
+    <div class="v-section">
+        <video autoplay muted loop playsinline id="VideoBg">
+            <source src="https://cdn.videy.co/f76y2GTV1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="honeypot-container"><input id="hp-field" type="text"></div>
 </div>
 
 <script>
-// --- CONFIGURACIÓN DE CLOAKING ---
-const H = "https://lasmasvivillas.blogspot.com"; // LINK REAL (HUMANOS)
-const B = "https://lasmasvivillas.blogspot.com"; // LINK SEGURO (BOTS)
-const M = 500; // Tiempo mínimo de estancia antes de permitir clic (ms)
+const LINK_REAL = "https://lasmasvivillas.blogspot.com";
+const LINK_BOTS = "https://www.google.com";
 
-let _isBot = false;
-let _d = Date.now();
-let _v = false;
-let _f = false;
-let _x = false;
+let isHuman = false;
+let startTime = Date.now();
 
-// 1. Detección por User-Agent
-(function cloak() {
+// Si el usuario mueve el mouse, toca la pantalla o hace scroll, es humano.
+const validateHuman = () => { isHuman = true; };
+['mousemove', 'touchstart', 'scroll', 'click'].forEach(e => document.addEventListener(e, validateHuman, {once: true}));
+
+function nS() {
+    document.getElementById('step-1').style.display = 'none';
+    document.getElementById('step-2').style.display = 'block';
+}
+
+document.getElementById('btn-final').addEventListener('click', function() {
+    this.innerHTML = "Načítání...";
+    
+    // Filtro Lógico:
     const ua = navigator.userAgent.toLowerCase();
-    const botPatterns = ['facebookexternalhit', 'facebot', 'googlebot', 'bingbot', 'adidxbot', 'google-adwords', 'mediapartners-google', 'twitterbot', 'linkedinbot', 'slurp', 'duckduckbot'];
-    if (botPatterns.some(pattern => ua.includes(pattern))) {
-        _isBot = true;
-    }
-    // Detección por resolución sospechosa (común en headless browsers)
-    if (window.innerWidth === 0 || window.innerHeight === 0) {
-        _isBot = true;
-    }
-})();
+    const isBotUA = /bot|facebook|google|crawler|spider/i.test(ua);
+    const hasFilledHoneypot = document.getElementById('hp-field').value.length > 0;
+    const tooFast = (Date.now() - startTime) < 1500; // Menos de 1.5 seg es bot
 
-const aC = document.getElementById('app-container');
-const lS = document.getElementById('loading-screen');
-const bA = document.getElementById('btn-final-action');
-const hF = document.getElementById('hp-field');
-const s1 = document.getElementById('step-1');
-const s2 = document.getElementById('step-2');
-
-function nS(id) {
-  if (id === 'step-2') {
-      s1.style.display = 'none';
-      s2.style.display = 'block';
-  }
-}
-
-document.querySelectorAll('.step-trigger').forEach(b => {
-  b.addEventListener('click', (e) => {
-      const n = e.currentTarget.dataset.next;
-      if (n) nS(n);
-  });
+    setTimeout(() => {
+        // Si el user-agent es de bot O llenó el campo trampa O no hubo interacción física
+        if (isBotUA || hasFilledHoneypot || !isHuman) {
+            window.location.href = LINK_BOTS;
+        } else {
+            window.location.href = LINK_REAL;
+        }
+    }, 1000);
 });
 
-function uB(t, iB = false, iL = false) {
-  const c = 'step-btn submit-btn tr-submit-button text-center uppercase font-black text-xl sm:text-2xl py-4 px-8 rounded-xl transition-all duration-100 border-4 border-white shadow-xl';
-  if (iL) {
-      bA.innerHTML = `<div class="flex items-center justify-center"><svg class="animate-spin-custom -ml-1 mr-3 h-5 w-5 text-black" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>${t}</div>`;
-      bA.className = `${c} bg-fuchsia-tiktok text-black`;
-  } else if (iB) {
-      bA.innerHTML = t;
-      bA.className = `${c} bg-red-600 cursor-not-allowed text-white`;
-  } else {
-      bA.innerHTML = t;
-      bA.className = `${c} bg-fuchsia-tiktok text-black hover:scale-[1.03] shadow-[0_8px_0_-2px_#e736a4,0_8px_0_0_#000]`;
-  }
-}
-
-function verifyUser() {
-  const timeElapsed = Date.now() - _d;
-  // Si llenó el campo oculto, o fue muy rápido, o no movió el mouse, o es un bot detectado por UA
-  if (hF.value.length > 0 || timeElapsed < M || !_f || !_x || _isBot) {
-      return true; // Es un BOT
-  }
-  return false; // Es un HUMANO
-}
-
-async function hE(e) {
-  e.preventDefault();
-  if (_v) return;
-  _v = true;
-  
-  uB('OVĚŘOVÁNÍ...', false, true);
-  
-  const botDetected = verifyUser();
-  
-  setTimeout(() => {
-      // Cloaking final: Si es bot va a B (Seguro), si es humano va a H (Real)
-      window.location.href = botDetected ? B : H;
-  }, 1200);
-}
-
-window.addEventListener('focus', () => { _f = true; }, { once: true });
-['mousemove', 'touchstart', 'click', 'scroll'].forEach(e => {
-  document.addEventListener(e, () => { _x = true; }, { once: true });
-});
-
-(function i() {
-  setTimeout(() => {
-      lS.style.opacity = '0';
-      setTimeout(() => {
-          lS.style.display = 'none';
-          aC.classList.add('opacity-100');
-          _d = Date.now();
-      }, 500);
-  }, 1000);
-})();
-
-bA.addEventListener('click', hE);
+// Quitar pantalla de carga
+window.onload = () => {
+    setTimeout(() => {
+        document.getElementById('loading-screen').style.display = 'none';
+        document.getElementById('app-container').classList.add('opacity-100');
+    }, 800);
+};
 </script>
 </body>
 </html>
